@@ -1,0 +1,182 @@
+@import "_reset", "_mixin";
+
+
+.body {
+    font-family: 'Roboto',
+        sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.wrapper {
+    width: 1920px;
+    display: flex;
+    margin: 0 auto;
+
+}
+
+.navigation {
+    width: 300px;
+    background: #242b2e;
+    justify-content: space-around;
+    text-align: right;
+
+
+    header {
+        .logo {
+            background: #fff;
+            text-align: center;
+            padding: 32px 0;
+        }
+
+        nav {
+            background: #333b3f;
+
+            li {
+                border-bottom: 1px #242b2e solid;
+                padding: 24px;
+
+                a {
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    color: #fff;
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    background: #30bcba;
+                }
+            }
+        }
+    }
+
+    footer {
+        background: #242b2e;
+        padding: 24px;
+
+        span {
+            color: #1ab5b3;
+            font-size: 19px;
+            font-weight: 400;
+            margin-left: 12px;
+
+        }
+
+        .footer-nav {
+            margin-top: 12px;
+
+            li {
+                a {
+                    color: #6b7072;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                }
+
+                .title {
+                    color: #fff;
+
+                }
+
+                padding: 7px 0;
+            }
+
+
+        }
+
+        .social {
+            font-size: 0;
+            margin: 55px 0 23px 0;
+
+            a {
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                background: url('../../build/img/sprite.png') -24px -24px;
+                margin-left: 8px;
+            }
+
+            a+a {
+                background: url('../../build/img/sprite.png') -48px 0;
+            }
+
+            a+a+a {
+                background: url('../../build/img/sprite.png') 0 -48px;
+            }
+
+            a+a+a+a {
+                background: url('../../build/img/sprite.png') -48px -24px;
+            }
+
+            a+a+a+a+a {
+                background: url('../../build/img/sprite.png') -24px 0;
+            }
+
+            a+a+a+a+a+a {
+                background: url('../../build/img/sprite.png') 0 0;
+            }
+
+            a+a+a+a+a+a+a {
+                background: url('../../build/img/sprite.png') 0 -24px;
+            }
+        }
+
+        p {
+            color: #6b7072;
+        }
+    }
+
+}
+
+main.page_home {
+    width: 1620px;
+    display: flex;
+    flex-wrap: wrap;
+
+    article {
+        width: 405px;
+        height: 311px;
+        background: #d7d7d7;
+        color: #333b3f;
+        font-size: 50px;
+        @include flexCenter();
+    }
+
+    .block__app {
+        background: #2db8b7;
+        @include flexCenter();
+        color: #fff;
+
+        .link_app {
+            text-align: center;
+
+            p {
+                font-size: 24px;
+                padding-bottom: 7px;
+            }
+
+            p+p {
+                font-size: 12px;
+                border-bottom: 1px #fff solid;
+                display: inline-block;
+                padding-bottom: 15px;
+
+            }
+
+            a {
+                display: block;
+                color: #fff;
+                font-size: 44px;
+                margin: 15px 0;
+            }
+        }
+    }
+
+    .article__grey {
+        background: #acacac;
+    }
+}
